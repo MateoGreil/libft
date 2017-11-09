@@ -6,13 +6,15 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 19:22:40 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/07 19:25:45 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/08 10:54:32 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		c -= 40;
+		c -= 32;
 	return (c);
 }

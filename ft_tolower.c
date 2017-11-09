@@ -6,13 +6,15 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 19:26:23 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/07 19:27:27 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/08 10:53:54 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		c += 40;
+		c += 32;
 	return (c);
 }

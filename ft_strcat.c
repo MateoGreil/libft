@@ -6,9 +6,11 @@
 /*   By: nsayer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 10:09:17 by nsayer            #+#    #+#             */
-/*   Updated: 2017/11/07 17:41:32 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/08 10:36:48 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

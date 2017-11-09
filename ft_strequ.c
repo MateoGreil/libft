@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsayer <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 11:41:07 by nsayer            #+#    #+#             */
-/*   Updated: 2017/11/08 10:37:27 by mgreil           ###   ########.fr       */
+/*   Created: 2017/11/08 12:26:03 by mgreil            #+#    #+#             */
+/*   Updated: 2017/11/08 12:30:07 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	int		i;
-	char	*str;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	str = (char*)malloc(sizeof(*str) * (i + 1));
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	if (ft_strcmp(s1, s2) == 0)
+		return (1);
+	return (0);
 }
