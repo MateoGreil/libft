@@ -6,11 +6,11 @@
 #    By: mgreil <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 14:57:40 by mgreil            #+#    #+#              #
-#    Updated: 2017/11/09 14:57:43 by mgreil           ###   ########.fr        #
+#    Updated: 2017/11/09 15:57:36 by mgreil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = createlib
+NAME = libft.a
 
 SRCS =	ft_memset.c \
 		ft_bzero.c \

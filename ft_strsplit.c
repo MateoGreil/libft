@@ -6,13 +6,13 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:26:22 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 12:12:32 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/09 17:07:57 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countword(char const *s, char c)
+static int	ft_countword(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	nword;
@@ -31,7 +31,7 @@ int		ft_countword(char const *s, char c)
 	return (nword);
 }
 
-int		ft_wl(char const *s, char c)
+static int	ft_wl(char const *s, char c)
 {
 	unsigned int	wlen;
 
@@ -41,7 +41,7 @@ int		ft_wl(char const *s, char c)
 	return (wlen);
 }
 
-char	*mallocword(char const *s, char c, unsigned int *i)
+static char	*mallocword(char const *s, char c, unsigned int *i)
 {
 	char	*tab;
 
@@ -54,7 +54,7 @@ char	*mallocword(char const *s, char c, unsigned int *i)
 	return (tab);
 }
 
-char	**ft_filltab(char **tab, char const *s, char c)
+static char	**ft_filltab(char **tab, char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -83,7 +83,7 @@ char	**ft_filltab(char **tab, char const *s, char c)
 	return (tab);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char			**tab;
 
