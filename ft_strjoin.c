@@ -6,7 +6,7 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:51:20 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 11:17:47 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/09 12:11:44 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	i;
 	unsigned int	lens1;
 	unsigned int	lens2;
-	char	*new;
+	char			*new;
 
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);

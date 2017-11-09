@@ -6,7 +6,7 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:26:22 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 12:03:08 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/09 12:12:32 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_countword(char const *s, char c)
 	}
 	return (nword);
 }
-/*tmp->*/#include <stdio.h>
+
 int		ft_wl(char const *s, char c)
 {
 	unsigned int	wlen;
@@ -59,7 +59,7 @@ char	**ft_filltab(char **tab, char const *s, char c)
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	word;
-	
+
 	i = 0;
 	word = 0;
 	while (s[i])

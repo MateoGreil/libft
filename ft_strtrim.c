@@ -6,7 +6,7 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:01:42 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 11:02:27 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/09 12:12:04 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s)
 	i = 0;
 	while (i < lens - wsstart - wsend)
 	{
-		new[i]  = s[wsstart + i];
+		new[i] = s[wsstart + i];
 		i++;
 	}
 	new[i] = '\0';
