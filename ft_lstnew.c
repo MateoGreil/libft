@@ -6,7 +6,7 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:36:00 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 12:52:19 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/10 11:06:50 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 			free(new);
 			return (NULL);
 		}
-		memcpy(new->content, content, content_size);
+		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}
 	else

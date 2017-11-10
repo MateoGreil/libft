@@ -6,13 +6,34 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:01:42 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 12:12:04 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/10 16:17:16 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static int	count_ws_start(char const *s)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i++;
+	return (i);
+}
+
+static int	count_ws_end(char const *s, unsigned int lens)
+{
+	unsigned int	i;
+
+	lens--;
+	i = 0;
+	while (s[lens - i] == ' ' || s[lens - i] == '\n' || s[lens - i] == '\t')
+		i++;
+	return (i);
+}
+
+char		*ft_strtrim(char const *s)
 {
 	unsigned int	lens;
 	unsigned int	wsstart;
@@ -20,16 +41,16 @@ char	*ft_strtrim(char const *s)
 	unsigned int	i;
 	char			*new;
 
-	lens = 0;
+	if (!s)
+		return (NULL);
 	lens = ft_strlen(s);
-	wsstart = 0;
-	while (s[wsstart] == ' ' || s[wsstart] == '\n' || s[wsstart] == '\t')
-		wsstart++;
+	wsstart = count_ws_start(s);
+	if (wsstart == lens)
+		return (ft_strdup(""));
 	wsend = 0;
-	while (s[lens - wsend - 1] == ' ' || s[lens - wsend - 1] == '\n' ||
-			s[lens - wsend - 1] == '\t')
-		wsend++;
-	if ((new = (char*)malloc(sizeof(char) * (lens - wsstart - wsend))) == NULL)
+	wsend = count_ws_end(s, lens);
+	if ((new = (char*)malloc(sizeof(char) * (lens - wsstart - wsend + 1)))
+			== NULL)
 		return (NULL);
 	i = 0;
 	while (i < lens - wsstart - wsend)

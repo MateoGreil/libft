@@ -6,7 +6,7 @@
 #    By: mgreil <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 14:57:40 by mgreil            #+#    #+#              #
-#    Updated: 2017/11/09 15:57:36 by mgreil           ###   ########.fr        #
+#    Updated: 2017/11/10 11:05:22 by mgreil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRCS =	ft_memset.c \
 		ft_lstdel.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
+		ft_lstmap.c \
 
 OBJS = $(SRCS:.c=.o)
 

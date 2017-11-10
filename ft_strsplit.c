@@ -6,7 +6,7 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:26:22 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 17:07:57 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/10 16:16:21 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	ft_countword(char const *s, char c)
 
 	i = 0;
 	nword = 0;
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
@@ -78,8 +80,7 @@ static char	**ft_filltab(char **tab, char const *s, char c)
 			i++;
 		word++;
 	}
-	tab[word] = (char*)malloc(sizeof(char) * 1);
-	tab[word][0] = '\0';
+	tab[word] = NULL;
 	return (tab);
 }
 
@@ -87,6 +88,15 @@ char		**ft_strsplit(char const *s, char c)
 {
 	char			**tab;
 
+	if (!s)
+		return (NULL);
+	if (ft_countword(s, c) == 0)
+	{
+		if ((tab = (char**)malloc(sizeof(char*) * 1)) == NULL)
+			return (NULL);
+		tab[0] = NULL;
+		return (tab);
+	}
 	if ((tab = (char**)malloc(sizeof(char*) * (ft_countword(s, c) + 1)))
 			== NULL)
 		return (NULL);

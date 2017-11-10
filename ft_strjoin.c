@@ -6,7 +6,7 @@
 /*   By: mgreil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:51:20 by mgreil            #+#    #+#             */
-/*   Updated: 2017/11/09 12:11:44 by mgreil           ###   ########.fr       */
+/*   Updated: 2017/11/10 16:15:20 by mgreil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	lens2;
 	char			*new;
 
+	if (!s1 || !s2)
+		return (NULL);
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
 	if ((new = (char*)malloc(sizeof(char) * (lens1 + lens2))) == NULL)
